@@ -23,7 +23,7 @@ const shapes = {
 };
 function icon(name) { return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${shapes[name] || shapes.spark}</svg>`; }
 function mascot(speech, cls = '') {
-  return `<div class="mascot-scene ${cls}"><img class="bip" src="assets/bip.webp" width="640" height="640" alt="${copy[language].mascotAlt}" fetchpriority="high" decoding="async"><div class="speech"><span class="mascot-label">BIP</span><p>${speech}</p></div></div>`;
+  return `<div class="mascot-scene ${cls}"><img class="bit" src="assets/bit.webp" width="640" height="640" alt="${copy[language].mascotAlt}" fetchpriority="high" decoding="async"><div class="speech"><span class="mascot-label">BIT</span><p>${speech}</p></div></div>`;
 }
 function button(text, target, secondary = false) { return `<a class="button ${secondary ? 'secondary' : 'primary'}" href="#${target}">${text}</a>`; }
 function external(text, url, cls = '') { return `<a class="${cls}" href="${url}" target="_blank" rel="noopener noreferrer">${text}<span class="sr-only"> ${language === 'fr' ? '(nouvel onglet)' : '(new tab)'}</span></a>`; }
@@ -46,7 +46,7 @@ function explore() {
   const subject = e.subjects.find(s => s.id === subjectId);
   if (!subject) return `<section class="content-page explore-page view">${step()}${heading(e.eyebrow, e.heading)}<div class="explore-layout"><div class="subject-grid">${e.subjects.map(s => `<button class="subject-card" data-subject="${s.id}"><span class="icon-badge">${icon(s.icon)}</span><strong>${s.name}</strong><small>${s.teaser}</small><span class="card-plus" aria-hidden="true">↗</span></button>`).join('')}</div>${mascot(e.speech, 'explore-mascot')}</div></section>`;
   const option = subject.options[optionIndex];
-  return `<section class="content-page subject-page view">${step()}<button class="back-link" data-all-subjects>← ${e.back}</button>${heading(e.choose, subject.name)}<div class="subject-detail"><div class="idea-content"><div class="choices" role="group" aria-label="${e.choose}">${subject.options.map((o, i) => `<button class="choice" data-option="${i}" aria-pressed="${optionIndex === i}" aria-controls="idea-panel">${o.title}</button>`).join('')}</div><article id="idea-panel" class="idea-panel" aria-live="polite" aria-atomic="true">${idea(option)}</article></div><img class="bip detail-bip" src="assets/bip.webp" width="640" height="640" alt="${copy[language].mascotAlt}"></div><div class="page-action">${button(e.next, 'join')}</div></section>`;
+  return `<section class="content-page subject-page view">${step()}<button class="back-link" data-all-subjects>← ${e.back}</button>${heading(e.choose, subject.name)}<div class="subject-detail"><div class="idea-content"><div class="choices" role="group" aria-label="${e.choose}">${subject.options.map((o, i) => `<button class="choice" data-option="${i}" aria-pressed="${optionIndex === i}" aria-controls="idea-panel">${o.title}</button>`).join('')}</div><article id="idea-panel" class="idea-panel" aria-live="polite" aria-atomic="true">${idea(option)}</article></div><img class="bit detail-bit" src="assets/bit.webp" width="640" height="640" alt="${copy[language].mascotAlt}"></div><div class="page-action">${button(e.next, 'join')}</div></section>`;
 }
 function join() {
   const j = copy[language].join;

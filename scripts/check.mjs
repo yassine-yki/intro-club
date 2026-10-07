@@ -25,7 +25,7 @@ for (const match of html.matchAll(/(?:src|href)="([^"#]+)"/g)) {
   if (!/^(https?:|data:)/.test(match[1])) await access(new URL(`dist/${match[1]}`,root));
 }
 let total=0;
-for (const filename of ['bip.webp']) {
+for (const filename of ['bit.webp']) {
   const image = new URL(`dist/assets/${filename}`,root);
   total += (await stat(image)).size;
   const bytes = await readFile(image);
@@ -33,10 +33,10 @@ for (const filename of ['bip.webp']) {
 }
 assert.ok(total < 350000,'Keep the mascot assets lightweight for mobile');
 const app = await readFile(new URL('dist/app.js',root),'utf8');
-assert.ok(app.includes('assets/bip.webp'));
-assert.ok(!app.includes('assets/orbit-'),'All screens must use BIP');
+assert.ok(app.includes('assets/bit.webp'));
+assert.ok(!app.includes('assets/orbit-'),'All screens must use BIT');
 for (const language of ['fr','en']) {
-  assert.ok(copy[language].title.includes('BIP'));
+  assert.ok(copy[language].title.includes('BIT'));
   for (const subject of copy[language].explore.subjects) {
     for (const option of subject.options) assert.ok(option.text.length <= 125,'Keep discovery ideas to a short sentence');
   }

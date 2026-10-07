@@ -9,13 +9,13 @@ export const links = {
 export const screens = ['welcome', 'club', 'explore', 'join'];
 export const copy = {
   fr: {
-    title: 'BIP · Club IT — HESTIM', description: 'Des idées. Des potes. Des projets. BIP te fait découvrir le Club IT — HESTIM.',
+    title: 'BIT · Club IT — HESTIM', description: 'Des idées. Des potes. Des projets. BIT te fait découvrir le Club IT — HESTIM.',
     navigation: 'Navigation principale', nav: ['Accueil', 'Le club', 'Explorer', 'Rejoindre'],
     step: 'ÉTAPE', of: 'SUR', mainSite: 'Site principal', footer: 'Club IT — HESTIM',
-    languageLabel: 'Choisis ta langue', mascotAlt: 'BIP, le petit robot bleu du Club IT — HESTIM',
+    languageLabel: 'Choisis ta langue', mascotAlt: 'BIT, la mascotte en cubes du Club IT — HESTIM',
     welcome: {
       eyebrow: 'BIENVENUE AU CLUB', heading: ['Des idées.', 'Des potes.', 'Des projets.'],
-      speech: 'Moi, c’est BIP. Je te fais visiter ?', tour: 'C’est parti !', join: 'Rejoindre le club', free: 'Explorer librement'
+      speech: 'Moi, c’est BIT. Je te fais visiter ?', tour: 'C’est parti !', join: 'Rejoindre le club', free: 'Explorer librement'
     },
     club: {
       eyebrow: 'L’ESPRIT DU CLUB', heading: 'La tech entre potes.', speech: 'Viens comme tu es. La curiosité suffit !',
@@ -58,13 +58,13 @@ export const copy = {
     }
   },
   en: {
-    title: 'BIP · Club IT — HESTIM', description: 'Ideas. Friends. Projects. Discover Club IT — HESTIM with BIP.',
+    title: 'BIT · Club IT — HESTIM', description: 'Ideas. Friends. Projects. Discover Club IT — HESTIM with BIT.',
     navigation: 'Main navigation', nav: ['Home', 'The club', 'Explore', 'Join'],
     step: 'STEP', of: 'OF', mainSite: 'Main website', footer: 'Club IT — HESTIM',
-    languageLabel: 'Choose your language', mascotAlt: 'BIP, the little blue robot of Club IT — HESTIM',
+    languageLabel: 'Choose your language', mascotAlt: 'BIT, the floating cube mascot of Club IT — HESTIM',
     welcome: {
       eyebrow: 'WELCOME TO THE CLUB', heading: ['Ideas.', 'Friends.', 'Projects.'],
-      speech: 'I’m BIP. Want a quick tour?', tour: 'Let’s go!', join: 'Join the club', free: 'Explore on my own'
+      speech: 'I’m BIT. Want a quick tour?', tour: 'Let’s go!', join: 'Join the club', free: 'Explore on my own'
     },
     club: {
       eyebrow: 'THE CLUB SPIRIT', heading: 'Tech with friends.', speech: 'Come as you are. Just bring your curiosity!',
