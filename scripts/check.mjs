@@ -25,13 +25,22 @@ for (const match of html.matchAll(/(?:src|href)="([^"#]+)"/g)) {
   if (!/^(https?:|data:)/.test(match[1])) await access(new URL(`dist/${match[1]}`,root));
 }
 let total=0;
-for (const pose of ['wave','point','celebrate']) {
-  const image = new URL(`dist/assets/orbit-${pose}.webp`,root);
+for (const filename of ['bip.webp']) {
+  const image = new URL(`dist/assets/${filename}`,root);
   total += (await stat(image)).size;
   const bytes = await readFile(image);
   assert.equal(bytes.toString('ascii',8,12),'WEBP');
 }
 assert.ok(total < 350000,'Keep the mascot assets lightweight for mobile');
+const app = await readFile(new URL('dist/app.js',root),'utf8');
+assert.ok(app.includes('assets/bip.webp'));
+assert.ok(!app.includes('assets/orbit-'),'All screens must use BIP');
+for (const language of ['fr','en']) {
+  assert.ok(copy[language].title.includes('BIP'));
+  for (const subject of copy[language].explore.subjects) {
+    for (const option of subject.options) assert.ok(option.text.length <= 125,'Keep discovery ideas to a short sentence');
+  }
+}
 const config = JSON.parse(await readFile(new URL('vercel.json',root),'utf8'));
 assert.equal(config.outputDirectory,'dist');
 await access(new URL(`${config.outputDirectory}/index.html`,root));

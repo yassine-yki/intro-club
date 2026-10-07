@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "A mobile-first discovery experience for Club IT — HESTIM, guided by Orbit.",
+  "description": "A mobile-first discovery experience for Club IT — HESTIM, guided by BIP.",
   "scripts": {
     "dev": "node scripts/serve.mjs",
     "start": "node scripts/serve.mjs",

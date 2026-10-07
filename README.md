@@ -1,6 +1,6 @@
-# Orbit · Club IT — HESTIM
+# BIP · Club IT — HESTIM
 
-A mobile-first introduction to the club, guided by Orbit. This is a separate experience from the [main club website](https://www.it-clubhestim.site/).
+A mobile-first introduction to the club, guided by BIP. This is a separate experience from the [main club website](https://www.it-clubhestim.site/).
 
 **Des idées. Des potes. Des projets.**
 
@@ -8,8 +8,9 @@ A mobile-first introduction to the club, guided by Orbit. This is a separate exp
 
 - Four screens: Welcome, Club spirit, Explore, and Join.
 - French and English, with a choice on the welcome screen and a switch available throughout. The visitor’s preference is remembered on their device.
-- Four subjects and twelve guided discovery choices: programming, AI, cybersecurity, and robotics & IoT.
-- Animated Orbit artwork with a reduced-motion alternative based on the visitor’s device setting.
+- Four subjects and twelve short discovery ideas: programming, AI, cybersecurity, and robotics & IoT. Select an idea to replace the current description in place.
+- Compact screens designed to fit standard phone viewports without scrolling. Large text and browser zoom can still expand the page, so nothing is clipped.
+- Animated BIP artwork with a reduced-motion alternative based on the visitor’s device setting.
 - Membership form, WhatsApp contact, Instagram **@hestimitclub**, and a link to the main website.
 
 The ideas shown are suggestions to explore, not claims about completed projects or scheduled events. The membership form is an external Google Form and remains in French.
@@ -49,9 +50,9 @@ Serve the site over HTTP; opening `index.html` directly from the filesystem will
 | File | What to change |
 | --- | --- |
 | `dist/content.js` | French and English copy, discovery subjects, options, and membership/contact links |
-| `dist/app.js` | Screen layout, navigation and Orbit’s responses |
+| `dist/app.js` | Screen layout, navigation and BIP’s responses |
 | `dist/styles.css` | Mobile-first layout, colors, typography and motion |
-| `dist/assets/` | Optimized transparent Orbit illustrations |
+| `dist/assets/` | Optimized transparent BIP illustrations |
 | `dist/index.html` | Page shell and metadata |
 | `vercel.json` | Deployment configuration |
 
@@ -69,4 +70,6 @@ Update both `fr` and `en` when changing copy. To add a discovery topic, add matc
 
 The site uses plain HTML, CSS and JavaScript with no backend, login or analytics. It only stores the language preference locally. Fonts load from Google Fonts; system fonts are used if that service is unavailable. External membership and social links open in a new tab.
 
-Orbit’s three standalone poses were generated from the approved character sheet, then optimized to transparent WebP images for mobile delivery. The current header uses a simple code mark with the club name; it can be replaced with the club’s original logo file.
+BIP's standalone illustration matches the blue robot on the approved roll-up. It was created with the built-in image tool using this brief: isolate the same blue robot, preserve its pixel smile, violet antenna, claw hands and full body, and use a transparent background with no text or poster elements. The transparent WebP is shared across all screens and is about 64 KB. The current header uses a simple code mark with the club name; it can be replaced with the club's original logo file.
+
+The compact layout was checked in a Chromium browser at nine viewport sizes, from 320 × 568 portrait and 568 × 320 landscape to desktop. All four screens and twelve idea states fit in both languages (288 combinations). Language persistence, switching ideas, reduced motion and access with enlarged text were also checked. This does not replace a final check on the team's actual phones.
