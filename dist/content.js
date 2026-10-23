@@ -1,6 +1,6 @@
 export const links = {
   form: 'https://docs.google.com/forms/d/e/1FAIpQLSdiGPLdgRGeQ-QyixGO6MR13K00yGENVtQSuu6LRbC3FUNJJA/viewform',
-  whatsapp: 'https://wa.me/212636811433',
+  whatsapp: 'https://chat.whatsapp.com/BgdLUxesb2qKQlJiA24qgV?s=cl&p=a&mlu=4&ilr=4',
   instagram: 'https://www.instagram.com/hestimitclub/',
   main: 'https://www.it-clubhestim.site/'
 };
